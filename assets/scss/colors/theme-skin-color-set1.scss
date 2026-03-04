@@ -1,0 +1,74 @@
+/* --------------------------------------
+$Author: ThemeMascot
+$URL: https://themeforest.net/user/ThemeMascot
+
+----------------------------------------- */
+$total-theme-colors: 4;
+
+$theme-color1: #CB935D;
+$theme-color2: #000000;
+$theme-color3: #46c47e;
+$theme-color4: #c66c18;
+
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+// text color over theme color bg
+$theme-color1-text-color: #fff;
+$theme-color2-text-color: #fff;
+$theme-color3-text-color: #fff;
+$theme-color4-text-color: #fff;
+
+//lighter darker
+$theme-color1-lighter: lighten($theme-color1, 11%);
+$theme-color1-darker: darken($theme-color1, 11%);
+$theme-color2-lighter: lighten($theme-color2, 11%);
+$theme-color2-darker: darken($theme-color2, 11%);
+$theme-color3-lighter: lighten($theme-color3, 11%);
+$theme-color3-darker: darken($theme-color3, 11%);
+$theme-color4-lighter: lighten($theme-color4, 11%);
+$theme-color4-darker: darken($theme-color4, 11%);
+
+:root {
+  --theme-color1: #{$theme-color1};
+  --theme-color1-rgb: #{hexToRGB($theme-color1)};
+  --theme-color1-lighter: #{$theme-color1-lighter};
+  --theme-color1-darker: #{$theme-color1-darker};
+  --theme-color2: #{$theme-color2};
+  --theme-color2-rgb: #{hexToRGB($theme-color2)};
+  --theme-color2-lighter: #{$theme-color2-lighter};
+  --theme-color2-darker: #{$theme-color2-darker};
+  --theme-color3: #{$theme-color3};
+  --theme-color3-rgb: #{hexToRGB($theme-color3)};
+  --theme-color3-lighter: #{$theme-color3-lighter};
+  --theme-color3-darker: #{$theme-color3-darker};
+  --theme-color4: #{$theme-color4};
+  --theme-color4-rgb: #{hexToRGB($theme-color4)};
+  --theme-color4-lighter: #{$theme-color4-lighter};
+  --theme-color4-darker: #{$theme-color4-darker};
+
+  --gradient-1: linear-gradient(181.35deg, rgba(5, 15, 19, 0) 1.15%, rgba(2, 223, 130, 0.1) 98.91%);
+  --gradient-2: linear-gradient(180deg, rgba(2, 6, 40, 0.2) 0%, rgba(44, 106, 236, 0.2) 100%);
+  --gradient-3: -webkit-gradient(linear, right bottom, left bottom, from(#8d56fa), color-stop(50%, #25184a), to(#8d56fa));
+  --gradient-4: linear-gradient(145.36deg, rgba(141, 86, 250, 0.3) 11.7%, rgba(13, 10, 28, 0.3) 80.03%);
+  --gradient-5: linear-gradient(to top, #8d56fa, #25184a 90%);
+  --gradient-6: linear-gradient(180.3deg, #1eccf3 33%, #305 100%);
+  --gradient-7: linear-gradient(180.3deg, #121846 0.26%, #020628 69.2%);
+  --gradient-8: linear-gradient(181.35deg, #121846 1.15%, #020628 98.91%);
+  --gradient-9: linear-gradient(180deg, #1ed3f3 -32.14%, #3055eb 98.21%);
+  --gradient-10: linear-gradient(180deg, rgba(2, 6, 40, 0.2) 0%, rgba(44, 106, 236, 0.2) 100%);
+  --gradient-11: linear-gradient(39.66deg, #222b1c -21.47%, #070c0f 55.5%);
+  --gradient-12: linear-gradient(90deg, #aee317 0%, rgba(96, 125, 13, 0) 100%);
+
+  --theme-color1-text-color: #{$theme-color1-text-color};
+  --theme-color2-text-color: #{$theme-color2-text-color};
+  --theme-color3-text-color: #{$theme-color3-text-color};
+  --theme-color4-text-color: #{$theme-color4-text-color};
+
+  --hover-theme-color: #{$theme-color1};
+  --footer-default-theme-color: var(--theme-color1);
+  --footer-default-hover-theme-color: var(--theme-color1);
+  --footer-default-text-color-on-bg-theme-color: var(--theme-color1-text-color);
+}
+@import "parts/loader";
